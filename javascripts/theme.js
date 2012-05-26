@@ -15,13 +15,17 @@ function insertAfter( referenceNode, newNode ) {
 }
 
 domready(function () {
+  var media = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+  if (media != 'mobile')
+    return
+
   document.getElementsByTagName("body")[0].addClassName("js");
   // move sidebar to bottom
   move_into("main", "sidebar");
   // move search into top nav
   move_into("top-menu", "quick-search");
 
-  // nav toggle button
+  // top menu toggle button
   (function(){
     var title = document.getElementById("header").getElementsByTagName("h1")[0];
     var button = document.createElement('a');
@@ -40,5 +44,26 @@ domready(function () {
     }
 
     insertAfter(title, button);
+  })();
+
+  // nav toggle button
+  (function(){
+    var menu = document.getElementById("main-menu");
+    var button = document.createElement('a');
+    button.innerHTML = "nav";
+    button.setAttribute("class", "toggle-button for-main-menu");
+    button.onclick = function() {
+      var t = document.getElementById("main-menu");
+      if (t.hasClassName('open')) {
+        // t.slideUp();
+        t.removeClassName('open');
+      }
+      else {
+        // t.slideDown();
+        t.addClassName('open');
+      }
+    }
+
+    menu.insertBefore(button);
   })();
 })
