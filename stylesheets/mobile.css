@@ -40,7 +40,6 @@
   }
 
   #top-menu {
-    max-height: 0;
     box-sizing: border-box;
     overflow: hidden;
     -webkit-transition: max-height .5s linear;
@@ -49,6 +48,9 @@
     padding: 0 10px !important;
     height: auto;
   }
+    .js #top-menu {
+      max-height: 0;
+    }
     #top-menu.open {
       max-height: 900px;
     }

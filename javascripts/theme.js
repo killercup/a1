@@ -15,6 +15,7 @@ function insertAfter( referenceNode, newNode ) {
 }
 
 domready(function () {
+  document.getElementsByTagName("body")[0].addClassName("js");
   // move sidebar to bottom
   move_into("main", "sidebar");
   // move search into top nav
