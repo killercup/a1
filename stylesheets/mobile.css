@@ -1,0 +1,100 @@
+/*
+ * Mobile Layout for A1 Redmine Theme
+ * by Pascal Hertleif <a1@pascalhertleif.de>
+ */
+
+@media (max-width: 767px) {
+  body {
+    min-width: 0;
+    -webkit-text-size-adjust:100%;
+  }
+
+  #main {
+    margin: 0 !important;
+    width: 100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+  }
+
+  #wrapper div#sidebar, html > body #wrapper div#content {
+    float: none;
+    width: 100% !important;
+    margin: 10px 0;
+    padding: 0 5px;
+    box-sizing: border-box;
+    min-height: 0;
+    word-wrap: break-word;
+  }
+
+  div#content > h2, div#content h2.contacts_header, div#content > div.filters h2, div#content > #add-news > h2, div#content > #add-message > h2, div#content > #add-document > h2 {
+    margin: 0 -5px 10px !important;
+  }
+
+  #top-menu {
+    height: 0;
+    padding-top: 20px;
+    overflow: hidden;
+    -webkit-transition: height .5s linear;
+  }
+    #top-menu:hover {
+      height: auto;
+      padding-bottom: 10px;
+    }
+    #top-menu #account, #top-menu #loggedas {
+      float: none;
+      font-size: 1em;
+      line-height: 1.4em;
+    }
+
+  #quick-search {
+    float: none;
+    /*height: 0;*/
+    overflow: hidden;
+  }
+    #header:hover #quick-search {
+      height: auto;
+    }
+    #quick-search label {
+      display: none;
+    }
+
+  #main-menu {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+    #main-menu ul {
+      width: 900px;
+    }
+
+  div#activity dl, #search-results {
+    margin-left: 0;
+  }
+    div#activity dl .author {
+      display: none;
+    }
+
+  #roadmap {
+    overflow: hidden;
+  }
+    #roadmap .progress {
+      -webkit-transform: scaleX(0.5);
+      -webkit-transform-origin: top left;
+    }
+
+  div.issue {
+    margin: -12px -10px 15px -10px;
+  }
+    .contextual {
+      white-space: initial;
+    }
+    .issue .gravatar {
+      display: none;
+    }
+    div#issue-changesets {
+      float: none;
+      width: 100%;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+}
