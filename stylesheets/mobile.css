@@ -9,6 +9,15 @@
     -webkit-text-size-adjust:100%;
   }
 
+  body, #wrapper {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  }
+
+  #wrapper #header > h1 {
+    background: none;
+    padding: 5px 10px;
+  }
+
   #main {
     margin: 0 !important;
     width: 100%;
@@ -31,31 +40,52 @@
   }
 
   #top-menu {
-    height: 0;
-    padding-top: 20px;
+    max-height: 0;
+    box-sizing: border-box;
     overflow: hidden;
-    -webkit-transition: height .5s linear;
+    -webkit-transition: max-height .5s linear;
+    font-size: 1em;
+    line-height: 2em;
+    padding: 0 10px !important;
+    height: auto;
   }
-    #top-menu:hover {
-      height: auto;
-      padding-bottom: 10px;
+    #top-menu.open {
+      max-height: 900px;
     }
-    #top-menu #account, #top-menu #loggedas {
+    #top-menu #account {
       float: none;
-      font-size: 1em;
-      line-height: 1.4em;
+      margin-top: 20px;
+    }
+    #top-menu li, #top-menu #loggedas {
+      float: none;
+      border-bottom: 1px solid #333;
+      padding: 3px 0;
+    }
+    #top-menu #loggedas {
+      color: #999;
     }
 
   #quick-search {
     float: none;
-    /*height: 0;*/
-    overflow: hidden;
+    margin-bottom: 12px;
   }
-    #header:hover #quick-search {
-      height: auto;
-    }
     #quick-search label {
       display: none;
+    }
+
+  #header .toggle-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    text-indent: -889px;
+    width: 24px;
+    height: 24px;
+    *background: url(../images/toggle_topmenu.png) no-repeat;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAwCAYAAAAGlsrkAAAAeElEQVR42u3NwQbAMBBF0fndUEII+ftWabzlVMdMN/dxd49j508DBgYGBgYGBgYGBgYGBgaOwe2uDhZqT60KPjYawS2MqiMJFvoej8PdRVUPwB4axy0BFf4RHgHUxS0NVcOBM1DhHjx1zsWtBFVTcBkqfMOrDFXrAoFYiMMO7xlhAAAAAElFTkSuQmCC) no-repeat;
+    background-size: 15px 24px; /* for retina displays */
+  }
+    #header .toggle-button:hover {
+      cursor: pointer;
     }
 
   #main-menu {
@@ -96,5 +126,4 @@
       margin-left: 0;
       padding-left: 0;
     }
-
 }
