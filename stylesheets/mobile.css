@@ -267,3 +267,9 @@
       display: block;
     }
 }
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2){
+  body, #wrapper {
+    background-size: 50px 50px;
+  }
+}
