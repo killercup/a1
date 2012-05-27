@@ -266,6 +266,35 @@
     .controller-repositories .contextual a.icon-stats {
       display: block;
     }
+
+  /*
+   * Login Page
+   */
+
+  body.action-login #login-form table {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px !important;
+    margin-top: 2em;
+  }
+  #login-form table td {
+    display: block;
+    text-align: left;
+  }
+  #content #login-form table input[type=text], #content #login-form table input[type=password], #content #login-form table input[type=submit] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  #login-form table input[type=submit] {
+    background: url(../images/bg-header.png) repeat-x 0px 0px;
+    border: none;
+    padding: 10px;
+    -webkit-appearance: none;
+    display: block;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2){
