@@ -166,6 +166,14 @@
     width: 100%;
   }
 
+  #wrapper #content .flash {
+    margin: 0 -5px;
+  }
+
+  #wrapper #content .flash + .contextual + h2, #wrapper #content .flash + h2 {
+    border-radius: 0;
+  }
+
   /*
    * roadmap
    */
@@ -197,6 +205,14 @@
       padding-left: 0;
     }
 
+  #update {
+    margin-top: 20px;
+  }
+    #update .box {
+      border: 0;
+      padding: 0;
+    }
+
   /*
    * Create Issue Form
    */
@@ -211,7 +227,16 @@
     display: inline-block;
     margin-right: 12px;
   }
-  
+
+  #content form .attributes select {
+    width: auto;
+  }
+
+  form fieldset {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   form textarea, form input[type=text] {
     box-sizing: border-box;
     max-width: 100%;
@@ -229,7 +254,7 @@
       padding: 0;
       text-indent: 66em;
     }
-  
+
   form label.floating {
     width: auto;
   }
